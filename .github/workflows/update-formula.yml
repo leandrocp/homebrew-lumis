@@ -2,7 +2,7 @@ name: Update formula
 
 on:
   schedule:
-    - cron: "23 * * * *"
+    - cron: "23 6 * * 1"
   workflow_dispatch:
   pull_request:
 
