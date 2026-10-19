@@ -11,5 +11,14 @@ brew install lumis
 The formula installs the prebuilt, checksummed CLI archive from the matching
 [Lumis GitHub Release](https://github.com/leandrocp/lumis/releases).
 
-The [Lumis release workflow](https://github.com/leandrocp/lumis/blob/main/.github/workflows/cli-binary-release.yml)
-updates the formula's version, URLs, and checksums after each stable CLI release.
+The [Update formula workflow](../../actions/workflows/update-formula.yml) checks
+weekly on Mondays at 06:23 UTC for a newer stable CLI release. It verifies all
+four archives against their SHA-256 files, then installs and tests the candidate
+on macOS and Linux, on both Intel and ARM runners, before committing it with this
+tap's `GITHUB_TOKEN`. No cross-repository credential is needed.
+
+Use **Run workflow** on `main` to retry a failed update. An incomplete release or
+failed verification leaves the formula unchanged and fails the Actions run;
+the next scheduled check tries again. A version already installed in the tap,
+or an older one, produces no commit. Concurrent updates are serialized, and a
+push fails rather than overwriting changes made while the candidate was tested.
