@@ -1,26 +1,26 @@
 class Lumis < Formula
   desc "Syntax highlighter powered by Tree-sitter and Neovim themes"
   homepage "https://lumis.sh"
-  version "0.7.2"
+  version "0.8.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/leandrocp/lumis/releases/download/cargo-lumis-cli/v0.7.2/lumis-aarch64-apple-darwin.tar.gz"
-      sha256 "03bcad495b348b12baca1fd90312ae56d775bbc266abbe18f49748d4019d1d99"
+      url "https://github.com/leandrocp/lumis/releases/download/cargo-lumis-cli/v0.8.1/lumis-aarch64-apple-darwin.tar.gz"
+      sha256 "6cbf4e1d9db9234dd717306d3afe0d501617b39f141d66f7dd719603aa8396bb"
     else
-      url "https://github.com/leandrocp/lumis/releases/download/cargo-lumis-cli/v0.7.2/lumis-x86_64-apple-darwin.tar.gz"
-      sha256 "15e4027ceca30f1b8984b357153a925ca564a6645f3356cb6df3f059e1ca8212"
+      url "https://github.com/leandrocp/lumis/releases/download/cargo-lumis-cli/v0.8.1/lumis-x86_64-apple-darwin.tar.gz"
+      sha256 "4c0e1a1479f075547f986fb92f9a353d1cfa3d98451e49abe5706bf9bc5b49cd"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/leandrocp/lumis/releases/download/cargo-lumis-cli/v0.7.2/lumis-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "b01bca8db9a2841d1f49cac01919917b59bc62505046d6deae4e9f107ac3ee1a"
+      url "https://github.com/leandrocp/lumis/releases/download/cargo-lumis-cli/v0.8.1/lumis-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "07fa4c09350f26f9e69ff3e6c705afbb9d7b01dfc0079350c99615759cd4b388"
     else
-      url "https://github.com/leandrocp/lumis/releases/download/cargo-lumis-cli/v0.7.2/lumis-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "b7dd42c6a18ba8da2f86c729054ea26ec0c479e87b1cc9bef482043fd62b9792"
+      url "https://github.com/leandrocp/lumis/releases/download/cargo-lumis-cli/v0.8.1/lumis-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "1fbca09be62bee1efedd96c145974b2f4563dc1108900408b9615491ef220f37"
     end
   end
 
