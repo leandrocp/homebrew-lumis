@@ -50,7 +50,7 @@ jobs:
         os: [macos-latest, macos-15-intel, ubuntu-latest, ubuntu-24.04-arm]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: Homebrew/actions/setup-homebrew@2026.11.02.1
+      - uses: Homebrew/actions/setup-homebrew@2026.11.09.1
         with:
           stable: true
       - uses: actions/download-artifact@v8.0.2
